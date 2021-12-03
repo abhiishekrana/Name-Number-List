@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div class="main" ng-app="myList" ng-controller="myListController">
+<h1>Contact List</h1>
+<div class="additem">
+    <input type="text" ng-model="newItem"  placeholder="name" class="name" >
+    <input type="text" ng-model="newContact" id="number" placeholder="Number" class="number">
+    <button ng-click="pushItem()" >Add</button>
+    
+</div>
+<ul>
+    <li ng-repeat="i in items" >
+     {{i}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{contacts[$index]}}
+        <span ng-click="deleteItem($index)">X</span>
+    </li>
+    
+</ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
